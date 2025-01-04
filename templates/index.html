@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Processing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            background-color: #fff;
+        }
+
+        thead {
+            background-color: #007bff;
+            color: white;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        th {
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        td {
+            font-size: 14px;
+            color: #333;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <h2>Table 1</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Index #</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in table1 %}
+            <tr>
+                <td>{{ row['Index #'] }}</td>
+                <td>{{ row['Value'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h2>Table 2</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in table2 %}
+            <tr>
+                <td>{{ row['category'] }}</td>
+                <td>{{ row['value'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <footer>
+        © Hi there, from Salman Ibrahim 
+    </footer>
+</body>
+</html>
